@@ -11,9 +11,13 @@ const items = MainCarouselData.map((item) => (
     <img  className="cursor pointer" role="presentation" src={item.image} alt="" />
 ));
 return (
-    <AliceCarousel
-        
+    <AliceCarousel 
         items={items}
+        disableButtonsControls
+        autoPlay
+        autoPlayInterval={1000}
+        infinite
+        
     />
 );
 }

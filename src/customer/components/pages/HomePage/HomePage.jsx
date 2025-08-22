@@ -1,13 +1,13 @@
 import React from 'react'
 import MainCarosel from '../../HomeCarosel/MainCarosel'
-
+import HomeSectionCarosel from '../../HomeSectionCarosel/HomeSectionCarosel'
 const HomePage = () => {
   return (
     <div>
       <MainCarosel />
     
     <div>
-        Other Sections
+        <HomeSectionCarosel />
     </div>
     </div>
   )
