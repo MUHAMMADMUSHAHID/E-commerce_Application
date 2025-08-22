@@ -14,10 +14,10 @@ const HomeSectionCarosel = () => {
     1024: { items: 5 },
   };
 
-  const items = [1, 1, 1, 1, 1].map((item, idx) => <HomeSectioncart key={idx} />);
+  const items = [1, 1, 1, 1, 1,1,1,1,1,1,1,1,1].map((item, idx) => <HomeSectioncart key={idx} />);
 
   return (
-    <div className="relative px-4 lg:px-8">
+    <div className="relative px-4 lg:px-8 ">
       <div className="relative p-5">
         <AliceCarousel
           ref={carouselRef}
