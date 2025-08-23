@@ -5,7 +5,8 @@ import HomeSectioncart from '../HomeSectionCard/HomeSectionCart';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
-const HomeSectionCarosel = () => {
+
+const HomeSectionCarosel = ({ data,SectionName  }) => {
   const carouselRef = useRef(null);
 
   const responsive = {
@@ -14,17 +15,18 @@ const HomeSectionCarosel = () => {
     1024: { items: 5 },
   };
 
-  const items = [1, 1, 1, 1, 1,1,1,1,1,1,1,1,1].map((item, idx) => <HomeSectioncart key={idx} />);
+  const items = data.slice(0, 11).map((item, idx) => <HomeSectioncart product={item} key={idx} />);
 
   return (
     <div className="relative px-4 lg:px-8 ">
+      <h2 className='text-2xl font-extrabold text-blue-300 py-5'>{SectionName}</h2>
       <div className="relative p-5">
         <AliceCarousel
           ref={carouselRef}
           items={items}
           disableButtonsControls
           disableDotsControls
-          infinite
+          //infinite
           responsive={responsive}
         />
 
