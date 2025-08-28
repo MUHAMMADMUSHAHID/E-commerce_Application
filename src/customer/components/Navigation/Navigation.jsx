@@ -17,6 +17,7 @@ import {
 } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
+
 const navigation = {
   categories: [
     {
@@ -173,7 +174,7 @@ export default function Navigation() {
             <TabGroup className="mt-2">
               <div className="border-b border-gray-200">
                 <TabList className="-mb-px flex space-x-8 px-4">
-                  {Navigation.categories.map((category) => (
+                  {navigation.categories.map((category) => (
                     <Tab
                       key={category.name}
                       className="flex-1 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-base font-medium text-gray-900 data-[selected]:border-indigo-600 data-[selected]:text-indigo-600"
