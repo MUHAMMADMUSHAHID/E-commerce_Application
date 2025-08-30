@@ -2,15 +2,15 @@
 import './App.css';
 import Footer from './customer/components/Footer/Footer';
 import Navigation from './customer/components/Navigation/Navigation';
-import HomePage from './customer/components/pages/HomePage/HomePage';
-import ProductCard from './customer/components/Product/ProductCard';
+import HomePage from './customer/pages/HomePage/HomePage';
+import Product from './customer/components/Product/Product';
 function App() {
   return (
     <div className="">
       <Navigation />
       <div>
         {/* <HomePage/> */}
-        <ProductCard/>
+        <Product/>
       </div>
       <Footer />
     </div>
