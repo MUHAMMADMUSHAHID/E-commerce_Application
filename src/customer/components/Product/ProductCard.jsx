@@ -1,6 +1,7 @@
 import React from 'react'
 import './ProductCard.css'
 
+
 const ProductCard = ({ Product }) => {
   return (
     <div className='productCard w-[15rem] m-3 transition-all cursor-pointer'>
