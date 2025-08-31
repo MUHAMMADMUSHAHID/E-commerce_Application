@@ -191,7 +191,7 @@ export default function Product() {
                         <span className="font-medium text-gray-900">{section.name}</span>
                         <span className="ml-6 flex items-center">
                           <PlusIcon aria-hidden="true" className="size-5 group-data-open:hidden" />
-                          <MinusIcon aria-hidden="true" className="size-5 group-not-data-open:hidden" />
+                          {/* <MinusIcon aria-hidden="true" className="size-5 group-not-data-open:hidden" /> */}
                         </span>
                       </DisclosureButton>
                     </h3>
@@ -247,7 +247,7 @@ export default function Product() {
                         <span className="font-medium text-gray-900">{section.name}</span>
                         <span className="ml-6 flex items-center">
                           <PlusIcon aria-hidden="true" className="size-5 group-data-open:hidden" />
-                          <MinusIcon aria-hidden="true" className="size-5 group-not-data-open:hidden" />
+                          {/* <MinusIcon aria-hidden="true" className="size-5 group-not-data-open:hidden" /> */}
                         </span>
                       </DisclosureButton>
                     </h3>
