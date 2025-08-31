@@ -197,8 +197,6 @@ export default function Product() {
                     </h3>
                     <DisclosurePanel className="pt-6">
                       <div className="space-y-4">
-                           {console.log("section:", section)}
-                          {console.log("section.options:", section.options)}
                         {section.options?.map((option, optionIdx) => (
                           <div key={option.value} className="flex gap-3">
                             <div className="flex h-5 shrink-0 items-center">
