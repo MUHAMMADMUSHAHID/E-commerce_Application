@@ -16,12 +16,13 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
 import ProductCard from '../Product/ProductCard'
 import { mens_kurta } from '../../../Data/mens_kurtas'
-import { filters, singleFilter } from '../Product/FilterData'
+import { color, filters, singleFilter } from '../Product/FilterData'
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
+import FilterListIcon from '@mui/icons-material/FilterList';
 
 const sortOptions = [
   { name: 'Price: Low to High', href: '#', current: false },
@@ -186,7 +187,12 @@ export default function Product() {
             </h2>
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
-              {/* Filters */}
+              <div>
+                <div className='flex items-center justify-between mb-5'>
+                       <h1 className='text-lg opacity-50 font-bold'>Filters</h1>
+                       <FilterListIcon />
+                </div>
+             
               <form className="hidden lg:block">
                 <h3 className="sr-only">Categories</h3>
                 {filters?.map((section) => (
@@ -247,11 +253,11 @@ export default function Product() {
                 ))}
                 {singleFilter?.map((section) => (
                   <Disclosure key={section.id} as="div" className="border-b border-gray-200 py-6">
-                      <FormControl>
+                      <>
                     <h3 className="-my-3 flow-root">
                       <DisclosureButton className="group flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                         {/* <span className=" text-gray-900"></span> */}
-                        <FormLabel id="demo-radio-buttons-group-label" className="font-medium text-gray-900">{section.name}</FormLabel>
+                        <FormLabel id="demo-radio-buttons-group-label" sx={{ color: 'black' }} className="font-medium text-gray-900">{section.name}</FormLabel>
                         <span className="ml-6 flex items-center">
                           <PlusIcon aria-hidden="true" className="size-5 group-data-open:hidden" />
                           {/* <MinusIcon aria-hidden="true" className="size-5 group-not-data-open:hidden" /> */}
@@ -260,6 +266,7 @@ export default function Product() {
                     </h3>
                     <DisclosurePanel className="pt-6">
                       <div className="space-y-4">
+                        <FormControl>
                           <RadioGroup
                                 aria-labelledby="demo-radio-buttons-group-label"
                                 defaultValue="female"
@@ -275,13 +282,15 @@ export default function Product() {
 
                         ))}
                         </RadioGroup>
+                        </FormControl>
                       </div>
                     </DisclosurePanel>
-                    </FormControl>
+                    </>
                   </Disclosure>
+
                 ))}
               </form>
-
+                </div>
               {/* Product grid */}
               <div className="lg:col-span-4 w-full">
                 <div className='flex flex-wrap justify-center bg-white py-5'>
