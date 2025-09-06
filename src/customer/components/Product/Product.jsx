@@ -292,7 +292,10 @@ export default function Product() {
               </form>
                 </div>
               {/* Product grid */}
-             
+              <div className="lg:col-span-4 w-full">
+                <div className='flex flex-wrap justify-center bg-white py-5'>
+                  {mens_kurta?.map((item)=><ProductCard Product={item}/>)}
+                </div>
               </div>
             </div>
           </section>
